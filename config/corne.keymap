@@ -1,50 +1,61 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
+        // ===== Layer 0: Base =====
         base {
+            // -----------------------------------------------------------------------------------------
+            // |       |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |       |
+            // |       |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |       |
+            // |       |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |       |
+            //                | GUI | LWR | SPC |   | ENT | RSE | ALT |
             bindings = <
-                &trans &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U &kp I &kp O &trans
-                &trans &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K &kp L &trans
-                &trans &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA &kp DOT &trans
-                         &sk LGUI &mo 1 &kp SPACE      &kp RET &mo 2 &kp RALT
+                &trans  &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I &kp O &trans
+                &trans  &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K &kp L &trans
+                &trans  &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &trans
+                         &sk LGUI &mo 1 &kp SPACE        &kp RET &mo 2 &kp RALT
             >;
         };
 
-
+        // ===== Layer 1: Numbers =====
         numbers {
             // -----------------------------------------------------------------------------------------
-            // |       |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |       |
-            // |       |     |     |     |     |     |   |     |     |     |     |     |       |
-            // |       |     |     |     |     |     |   |     |     |     |     |     |       |
+            // |       |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |       |
+            // |       |     |     |     |     |     |   |     |     |     |     |       |
+            // |       |     |     |     |     |     |   |     |     |     |     |       |
             //                | GUI |     | SPC |   | ENT |     | ALT |
             bindings = <
-   &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5       &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
-   &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
-                        &sk LGUI &trans &kp SPACE  &kp RET &trans &kp RALT
+                &trans  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp N6 &kp N7 &kp N8 &kp N9 &trans
+                &trans  &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+                &trans  &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+                         &sk LGUI &trans &kp SPACE           &kp RET &trans &kp RALT
             >;
         };
 
+        // ===== Layer 2: Pedro =====
         pedro {
             // -----------------------------------------------------------------------------------------
-            // |       |     |     |     |     |     |   |     |     |     |     |     |       |
-            // |       |     |     |     |     |     |   | LFT | DWN |  UP | RGT |     |       |
-            // | BTCLR | BTPR| BTNX|     |     |     |   |     |     |     |     |     |       |
-            //                | GUI |     | SPC |   | ENT |     | ALT |
+            // |       |     |     |     |     |     |   |     |     |     |     |       |
+            // |       |     |     |     |     |     |   | LFT | DWN |  UP | RGT |       |
+            // | BTCLR | BTPR| BTNX|     |     |     |   |     |     |     |     |       |
+            //                | SHFT|     | SPC |   | ENT |     | ALT |
             bindings = <
-   &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans       &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &bt BT_CLR &bt BT_PREV &bt BT_NEXT &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-                        &sk LSHFT &trans &kp SPACE  &kp RET &trans &kp RALT
+                &trans  &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+                &trans  &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
+                &bt BT_CLR &bt BT_PREV &bt BT_NEXT &trans &trans &trans    &trans &trans &trans &trans &trans
+                         &sk LSHFT &trans &kp SPACE          &kp RET &trans &kp RALT
             >;
         };
 
+        // ===== Combos =====
         combos {
             compatible = "zmk,combos";
             studio_unlock_combo {
                 timeout-ms = <50>;
-                key-positions = <0 11>; // Top-left + top-right key
+                key-positions = <0 11>; // Top-left + top-right
                 bindings = <&studio_unlock>;
             };
         };
