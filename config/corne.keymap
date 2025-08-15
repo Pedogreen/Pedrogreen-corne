@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/sensors.h>
 
 / {
     keymap {
@@ -44,9 +45,9 @@
             // | BTCLR | BTPR| BTNX|     |     |     |   |     |     |     |     |       |
             //                | SHFT|     | SPC |   | ENT |     | ALT |
             bindings = <
-                &trans  &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
-                &trans  &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-                &bt BT_CLR &bt BT_PREV &bt BT_NEXT &trans &trans &trans    &trans &trans &trans &trans &trans
+                &trans  &trans &trans &trans &trans &trans                &trans &trans &kp UP &trans &trans &trans
+                &trans  &trans &trans &trans &trans &trans                &trans &kp LEFT &kp DOWN  &kp RIGHT &trans &trans
+                &bt BT_CLR &bt BT_PREV &bt BT_NEXT &trans &trans &trans    &trans &trans &trans &trans &trans &trans
                          &sk LSHFT &trans &kp SPACE          &kp RET &trans &kp RALT
             >;
         };
@@ -54,7 +55,7 @@
         // ===== Combos =====
         combos {
             compatible = "zmk,combos";
-            studio_unlock_combo {
+            combo_studio_unlock {
                 timeout-ms = <50>;
                 key-positions = <0 11>; // Top-left + top-right
                 bindings = <&studio_unlock>;
