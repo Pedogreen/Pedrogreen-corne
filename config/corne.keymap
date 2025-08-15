@@ -46,7 +46,7 @@
             bindings = <
                 &trans  &trans &trans &trans &trans &trans                &trans &trans &kp UP &trans &trans &trans
                 &trans  &trans &trans &trans &trans &trans                &trans &kp LEFT &kp DOWN  &kp RIGHT &trans &trans
-                &bt BT_CLR &bt BT_PREV &bt BT_NEXT &trans &trans &trans    &trans &trans &trans &trans &trans &trans
+                &bt BT_CLR &bt BT_PRV &bt BT_NXT &trans &trans &trans    &trans &trans &trans &trans &trans &trans
                          &sk LSHFT &trans &kp SPACE          &kp RET &trans &kp RALT
             >;
         };
