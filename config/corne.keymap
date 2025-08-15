@@ -2,7 +2,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
+        base {
             // -----------------------------------------------------------------------------------------
             // |       |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |       |
             // |       |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |       |
@@ -16,7 +16,7 @@
             >;
         };
 
-        numbers_layer {
+        numbers {
             // -----------------------------------------------------------------------------------------
             // |       |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |       |
             // |       |     |     |     |     |     |   |     |     |     |     |     |       |
@@ -30,20 +30,19 @@
             >;
         };
 
-        pedro_layer {
+        pedro {
             // -----------------------------------------------------------------------------------------
             // |       |     |     |     |     |     |   |     |     |     |     |     |       |
             // |       |     |     |     |     |     |   | LFT | DWN |  UP | RGT |     |       |
             // | BTCLR | BTPR| BTNX|     |     |     |   |     |     |     |     |     |       |
             //                | GUI |     | SPC |   | ENT |     | ALT |
             bindings = <
-           &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
-           &trans &trans &trans &trans &trans &trans       &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-           &bt BT_CLR &bt BT_PREV &bt BT_NEXT &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-                                &sk LSHIFT &trans &kp SPACE  &kp RET &trans &kp RALT
+   &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans       &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &bt BT_CLR &bt BT_PREV &bt BT_NEXT &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+                        &sk LSHFT &trans &kp SPACE  &kp RET &trans &kp RALT
             >;
         };
-
 
         combos {
             compatible = "zmk,combos";
