@@ -70,9 +70,9 @@
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
                       &trans       &kp F6      &kp F7      &kp F8      &kp F9        &kp F10     &bt BT_PRV   &bt BT_NXT     &trans        &trans        &trans        &trans
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
-                      &trans       &kp LEFT_W  &kp RIGHT_W &kp F11     &kp F12       &trans      &kp PSCRN     &trans        &trans        &trans        &trans        &trans
+                      &trans     &kp LEFT_W  &kp RIGHT_W  &kp F11     &kp F12       &trans      &kp PSCRN     &trans        &trans        &trans        &trans        &trans
                 // ╰───────────┴───────────┴───────────┴───────────┴────────────┴────────────┴─┴───────────┴─────────────┴────────────┴────────────┴───────────┴────────────╯
-                                    &kp LALT    &sys_reset  &trans                                     &trans        &sys_reset    &bootloader
+                                    &kp LALT    &trans  &trans                                     &trans        &trans    &trans
             >;
         };
     };
