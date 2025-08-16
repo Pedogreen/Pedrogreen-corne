@@ -6,8 +6,6 @@
 #define LOWER   1
 #define RAISE   2
 #define FUN     3
-#define COLEMAK 4   /* placeholder, define layer later if you use it */
-#define GAME    5   /* placeholder, define layer later if you use it */
 
 #define LEFT_W  LC(LG(LEFT))    /* Win+Ctrl+Left  */
 #define RIGHT_W LC(LG(RIGHT))   /* Win+Ctrl+Right */
@@ -66,7 +64,7 @@
             label = "FUN";
             bindings = <
                 // ╭───────────┬───────────┬───────────┬───────────┬────────────┬────────────╮ ╭───────────┬─────────────┬────────────┬────────────┬───────────┬────────────╮
-                      &trans       &kp F1      &kp F2      &kp F3      &kp F4        &kp F5      &kp CAPS      &to BASE      &to COLEMAK   &to GAME      &bt BT_CLR   &trans
+                      &trans       &kp F1      &kp F2      &kp F3      &kp F4        &kp F5      &kp CAPS      &to BASE      &trans       &trans      &bt BT_CLR   &trans
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
                       &trans       &kp F6      &kp F7      &kp F8      &kp F9        &kp F10     &bt BT_PRV   &bt BT_NXT     &trans        &trans        &trans        &trans
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
@@ -86,7 +84,7 @@
             timeout-ms = <50>;
             key-positions = <37 39>;
             layers = <BASE>;
-            bindings = <&tog FUN>;
+            bindings = <&to FUN>;
         };
 
         /* Same combo on FUN to go back to BASE */
