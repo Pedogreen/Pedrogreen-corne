@@ -34,13 +34,13 @@
             label = "LOWER";
             bindings = <
                 // ╭───────────┬───────────┬───────────┬───────────┬────────────┬────────────╮ ╭───────────┬─────────────┬────────────┬────────────┬───────────┬────────────╮
-                     &kp TAB      &trans      &trans      &trans      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+                     &trans       &kp TAB      &trans      &trans      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
                       &trans       &kp N1      &kp N2      &kp N3      &kp N4       &kp N5        &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &trans
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
                       &trans       &kp Z       &kp X       &kp C       &kp V        &kp B         &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &trans
                 // ╰───────────┴───────────┴───────────┴───────────┴────────────┴────────────┴─┴───────────┴─────────────┴────────────┴────────────┴───────────┴────────────╯
-                                    &sk LCTRL   &mo LOWER    &kp LSHIFT                                &kp RET      &mo RAISE    &kp DEL
+                                    &sk LCTRL   &mo LOWER    &sk LSHIFT                                &kp RET      &mo RAISE    &kp DEL
             >;
         };
 
@@ -49,11 +49,11 @@
             label = "RAISE";
             bindings = <
                 // ╭───────────┬───────────┬───────────┬───────────┬────────────┬────────────╮ ╭───────────┬─────────────┬────────────┬────────────┬───────────┬────────────╮
-                      &trans       &kp Q       &kp W       &kp E       &kp R         &kp T         &kp Y         &kp U         &kp UP        &kp O         &kp P        &trans
+                       &trans       &kp TAB      &trans      &trans      &trans        &trans        &trans        &trans     &kp UP      &trans      &trans        &trans
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
-                      &trans       &kp A       &kp S       &kp D       &kp F         &kp G         &kp H         &kp LEFT      &kp DOWN      &kp RIGHT     &kp SEMI     &trans
+                      &trans       &kp A       &kp S       &kp D       &kp F         &kp G         &kp H       &kp LEFT      &kp DOWN    &kp RIGHT     &kp SEMI     &trans
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
-                      &trans       &kp Z       &kp X       &kp C       &kp V         &kp B         &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH     &trans
+                      &trans       &kp Z       &kp X       &kp C       &kp V         &kp B         &kp N         &kp M     &kp COMMA    &kp DOT       &kp FSLH     &trans
                 // ╰───────────┴───────────┴───────────┴───────────┴────────────┴────────────┴─┴───────────┴─────────────┴────────────┴────────────┴───────────┴────────────╯
                                     &sk LCTRL   &mo LOWER    &kp LALT                                  &kp RET      &mo RAISE    &kp BSPC
             >;
@@ -68,7 +68,7 @@
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
                       &trans       &kp F6      &kp F7      &kp F8      &kp F9        &kp F10     &bt BT_PRV   &bt BT_NXT     &trans        &trans        &trans        &trans
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
-                      &trans     &kp LEFT_W  &kp RIGHT_W  &kp F11     &kp F12       &trans      &kp PSCRN     &trans        &trans        &trans        &trans        &trans
+                      &trans     &kp LEFT_W  &kp RIGHT_W  &kp F11     &kp F12       &kp PSCRN    &trans      &trans        &trans        &trans        &trans        &trans
                 // ╰───────────┴───────────┴───────────┴───────────┴────────────┴────────────┴─┴───────────┴─────────────┴────────────┴────────────┴───────────┴────────────╯
                                     &kp LALT    &trans  &trans                                     &trans        &trans    &trans
             >;
@@ -82,7 +82,7 @@
         /* Toggle FUN on BASE (positions 37 + 39 are your thumbs; adjust if needed) */
         combo_fun {
             timeout-ms = <50>;
-            key-positions = <37 39>;
+            key-positions = <37 40>;
             layers = <BASE>;
             bindings = <&to FUN>;
         };
@@ -90,7 +90,7 @@
         /* Same combo on FUN to go back to BASE */
         combo_base {
             timeout-ms = <50>;
-            key-positions = <37 39>;
+            key-positions = <37 40>;
             layers = <FUN>;
             bindings = <&to BASE>;
         };
