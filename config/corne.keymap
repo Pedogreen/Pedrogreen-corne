@@ -76,92 +76,92 @@
     };
 
     // ===================== Combos =====================
-    combos {
-        compatible = "zmk,combos";
-
-        /* Toggle FUN on BASE (positions 37 + 39 are your thumbs; adjust if needed) */
-        combo_fun {
-            timeout-ms = <50>;
-            key-positions = <37 40>;
-            layers = <BASE>;
-            bindings = <&to FUN>;
-        };
-
-        /* Same combo on FUN to go back to BASE */
-        combo_base {
-            timeout-ms = <50>;
-            key-positions = <37 40>;
-            layers = <FUN>;
-            bindings = <&to BASE>;
-        };
-
-       // Start/stop Alt (tap = one-shot, double-tap = lock, tap again = unlock)
-       combo_alt_lock {
+   combos {
+       compatible = "zmk,combos";
+   
+       combo_fun {
            timeout-ms = <50>;
-           key-positions = <2 3>;     // your original "first combo"
+           key-positions = <37 40>;
            layers = <BASE>;
-           bindings = <&sk LALT>;
+           bindings = <&to FUN>;
        };
-       combo_shift_lock {
+   
+       combo_base {
            timeout-ms = <50>;
-           key-positions = <13 14>; 
-           layers = <BASE>;
-           bindings = <&sk LSHIFT>;
+           key-positions = <37 40>;
+           layers = <FUN>;
+           bindings = <&to BASE>;
        };
-       
-       // Step forward (consumes the one-shot Alt, or uses locked Alt)
+   
+       // One-tap toggle (no double-tap needed)
+       combo_alt_toggle {
+           timeout-ms = <50>;
+           key-positions = <2 3>;
+           layers = <BASE>;
+           bindings = <&kt LALT>;
+       };
+   
+       combo_shift_toggle {
+           timeout-ms = <50>;
+           key-positions = <13 14>;
+           layers = <BASE>;
+           bindings = <&kt LSHIFT>;
+       };
+   
        combo_tab_fwd {
            timeout-ms = <50>;
-           key-positions = <3 4>;     // your original "second combo" positions
+           key-positions = <3 4>;
            layers = <BASE>;
            bindings = <&kp TAB>;
        };
-       
-       // Step backward (Shift+Tab; Alt comes from one-shot/lock above)
+   
        combo_tab_back {
            timeout-ms = <50>;
-           key-positions = <1 2>;     // your original "third combo" positions
+           key-positions = <1 2>;
            layers = <BASE>;
            bindings = <&kp LS(TAB)>;
        };
-
+   
        simple_classic_brace {
            timeout-ms = <50>;
-           key-positions = <7 8>;    
+           key-positions = <7 8>;
            layers = <BASE>;
            bindings = <&kp LS(N9)>;
        };
+   
        simple_classic_closing_brace {
            timeout-ms = <50>;
-           key-positions = <8 9>;     
+           key-positions = <8 9>;
            layers = <BASE>;
            bindings = <&kp LS(N0)>;
        };
-
-         simple_bracket {
+   
+       simple_bracket {
            timeout-ms = <50>;
-           key-positions = <19 20>;    
+           key-positions = <19 20>;
            layers = <BASE>;
            bindings = <&kp LBKT>;
        };
-         simple_closing_bracket {
+   
+       simple_closing_bracket {
            timeout-ms = <50>;
-           key-positions = <20 21>;    
+           key-positions = <20 21>;
            layers = <BASE>;
            bindings = <&kp RBKT>;
        };
-
-         simple_brace {
+   
+       simple_brace {
            timeout-ms = <50>;
-           key-positions = <31 32>;    
+           key-positions = <31 32>;
            layers = <BASE>;
            bindings = <&kp LS(LBKT)>;
        };
-         simple_closing_brace {
+   
+       simple_closing_brace {
            timeout-ms = <50>;
-           key-positions = <32 33>;    
+           key-positions = <32 33>;
            layers = <BASE>;
            bindings = <&kp LS(RBKT)>;
        };
-    };
+   };
 };
