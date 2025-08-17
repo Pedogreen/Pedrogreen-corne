@@ -163,5 +163,6 @@
            layers = <BASE>;
            bindings = <&kp LS(RBKT)>;
        };
+    };
    };
 };
