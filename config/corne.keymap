@@ -11,27 +11,12 @@
 #define RIGHT_W LC(LG(RIGHT))   /* Win+Ctrl+Right */
 
  / {
-    behaviors {
-        alt_lock: alt_lock {
-            compatible = "zmk,behavior-macro";
-            label = "ALT_LOCK";
-            #binding-cells = <0>;
-            bindings = <&sk LALT &sk LALT>;
-        };
-        shift_lock: shift_lock {
-            compatible = "zmk,behavior-macro";
-            label = "SHIFT_LOCK";
-            #binding-cells = <0>;
-            bindings = <&sk LSHIFT &sk LSHIFT>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         // ===================== Layer 0: BASE =====================
         base_layer {
-            label = "BASE";
+            display-name = "BASE";
             bindings = <
                 // ╭───────────┬───────────┬───────────┬───────────┬────────────┬────────────╮ ╭───────────┬─────────────┬────────────┬────────────┬───────────┬────────────╮
                       &trans        &kp Q       &kp W       &kp E       &kp R         &kp T        &kp Y         &kp U       &kp I         &kp O       &kp P        &trans
@@ -46,7 +31,7 @@
 
         // ===================== Layer 1: LOWER ====================
         lower_layer {
-            label = "LOWER";
+            display-name = "LOWER";
             bindings = <
                 // ╭───────────┬───────────┬───────────┬───────────┬────────────┬────────────╮ ╭───────────┬─────────────┬────────────┬────────────┬───────────┬────────────╮
                      &trans       &kp TAB   &sk LSHIFT    &trans      &trans        &trans       &trans        &trans        &trans        &trans      &trans      &trans
@@ -61,7 +46,7 @@
 
         // ===================== Layer 2: RAISE ====================
         raise_layer {
-            label = "RAISE";
+            display-name = "RAISE";
             bindings = <
                 // ╭───────────┬───────────┬───────────┬───────────┬────────────┬────────────╮ ╭───────────┬─────────────┬────────────┬────────────┬───────────┬────────────╮
                        &trans     &kp ESC      &trans      &trans      &trans        &trans        &trans        &trans     &kp UP        &trans      &trans        &trans
@@ -76,7 +61,7 @@
 
         // ===================== Layer 3: FUN =====================
         fun_layer {
-            label = "FUN";
+            display-name = "FUN";
             bindings = <
                 // ╭───────────┬───────────┬───────────┬───────────┬────────────┬────────────╮ ╭───────────┬─────────────┬────────────┬────────────┬───────────┬────────────╮
                       &trans       &kp F1      &kp F2      &kp F3      &kp F4        &kp F5      &kp CAPS      &to BASE      &trans       &trans      &bt BT_CLR   &trans
@@ -115,13 +100,13 @@
            timeout-ms = <50>;
            key-positions = <2 3>;     // your original "first combo"
            layers = <BASE>;
-           bindings = <&alt_lock>;
+           bindings = <&kt LALT>;
        };
        combo_shift_lock {
            timeout-ms = <50>;
            key-positions = <13 14>; 
            layers = <BASE>;
-           bindings = <&shift_lock>;
+           bindings = <&kt LSHIFT>;
        };
        
        // Step forward (consumes the one-shot Alt, or uses locked Alt)
