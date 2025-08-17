@@ -100,13 +100,13 @@
            timeout-ms = <50>;
            key-positions = <2 3>;     // your original "first combo"
            layers = <BASE>;
-           bindings = <&kt LALT>;
+           bindings = <&sk LALT>;
        };
        combo_shift_lock {
            timeout-ms = <50>;
            key-positions = <13 14>; 
            layers = <BASE>;
-           bindings = <&kt LSHIFT>;
+           bindings = <&sk LSHIFT>;
        };
        
        // Step forward (consumes the one-shot Alt, or uses locked Alt)
