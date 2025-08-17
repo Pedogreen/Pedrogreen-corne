@@ -11,6 +11,21 @@
 #define RIGHT_W LC(LG(RIGHT))   /* Win+Ctrl+Right */
 
  / {
+    behaviors {
+        alt_lock: alt_lock {
+            compatible = "zmk,behavior-macro";
+            label = "ALT_LOCK";
+            #binding-cells = <0>;
+            bindings = <&sk LALT &sk LALT>;
+        };
+        shift_lock: shift_lock {
+            compatible = "zmk,behavior-macro";
+            label = "SHIFT_LOCK";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &sk LSHIFT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -96,12 +111,19 @@
         };
 
        // Start/stop Alt (tap = one-shot, double-tap = lock, tap again = unlock)
-       combo_alt_sticky {
+       combo_alt_lock {
            timeout-ms = <50>;
            key-positions = <2 3>;     // your original "first combo"
            layers = <BASE>;
-           bindings = <&kt LALT>;
-       };
+           bindings = <&alt_lock>;
+       }
+\
+       combo_shift_lock {
+           timeout-ms = <50>;
+           key-positions = <13 14>; 
+           layers = <BASE>;
+           bindings = <&shift_lock>;
+       }
        
        // Step forward (consumes the one-shot Alt, or uses locked Alt)
        combo_tab_fwd {
@@ -109,7 +131,7 @@
            key-positions = <3 4>;     // your original "second combo" positions
            layers = <BASE>;
            bindings = <&kp TAB>;
-       };
+       }
        
        // Step backward (Shift+Tab; Alt comes from one-shot/lock above)
        combo_tab_back {
@@ -117,45 +139,45 @@
            key-positions = <1 2>;     // your original "third combo" positions
            layers = <BASE>;
            bindings = <&kp LS(TAB)>;
-       };
+       }
 
        simple_classic_brace {
            timeout-ms = <50>;
            key-positions = <7 8>;    
            layers = <BASE>;
            bindings = <&kp LS(N9)>;
-       };
+       }
        simple_classic_closing_brace {
            timeout-ms = <50>;
            key-positions = <8 9>;     
            layers = <BASE>;
            bindings = <&kp LS(N0)>;
-       };
+       }
 
          simple_bracket {
            timeout-ms = <50>;
            key-positions = <19 20>;    
            layers = <BASE>;
            bindings = <&kp LBKT>;
-       };
+       }
          simple_closing_bracket {
            timeout-ms = <50>;
            key-positions = <20 21>;    
            layers = <BASE>;
-           bindings = <&kp LBKT>;
-       };
+           bindings = <&kp RBKT>;
+       }
 
          simple_brace {
            timeout-ms = <50>;
            key-positions = <31 32>;    
            layers = <BASE>;
-           bindings = <&kp LBKT>;
-       };
+           bindings = <&kp LS(LBKT)>;
+       }
          simple_closing_brace {
            timeout-ms = <50>;
            key-positions = <32 33>;    
            layers = <BASE>;
-           bindings = <&kp LBKT>;
-       };
+           bindings = <&kp LS(RBKT)>;
+       }
     };
 };
