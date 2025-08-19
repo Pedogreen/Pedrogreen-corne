@@ -98,28 +98,28 @@
            timeout-ms = <50>;
            key-positions = <2 3>;
            layers = <BASE>;
-           bindings = <&kp LALT>;
+           bindings = <&kt LALT>;
        };
    
        combo_shift_toggle {
            timeout-ms = <50>;
            key-positions = <13 14>;
            layers = <BASE>;
-           bindings = <&kp LSHIFT>;
+           bindings = <&sk LSHIFT>;
        };
    
        combo_tab_fwd {
            timeout-ms = <50>;
            key-positions = <3 4>;
            layers = <BASE>;
-           bindings = <&kp TAB>;
+           bindings = <&kt TAB>;
        };
    
        combo_tab_back {
            timeout-ms = <50>;
            key-positions = <1 2>;
            layers = <BASE>;
-           bindings = <&kp LS(TAB)>;
+           bindings = <&kt LS(TAB)>;
        };
    
        simple_classic_brace {
