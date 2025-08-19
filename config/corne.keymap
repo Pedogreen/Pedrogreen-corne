@@ -40,7 +40,7 @@
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
                       &trans       &trans      &trans      &trans      &trans        &trans      &trans        &trans        &trans        &trans     &trans       &trans
                 // ╰───────────┴───────────┴───────────┴───────────┴────────────┴────────────┴─┴───────────┴─────────────┴────────────┴────────────┴───────────┴────────────╯
-                                    &kp LGUI   &mo LOWER    &sk LSHIFT                                &kp RET      &mo RAISE    &kp DEL
+                                    &kp LGUI   &mo LOWER    &sk LSHIFT                                &sk LSHIFT      &mo RAISE    &kp DEL
             >;
         };
 
@@ -112,14 +112,14 @@
            timeout-ms = <50>;
            key-positions = <3 4>;
            layers = <BASE>;
-           bindings = <&kt TAB>;
+           bindings = <&kp TAB>;
        };
    
        combo_tab_back {
            timeout-ms = <50>;
            key-positions = <1 2>;
            layers = <BASE>;
-           bindings = <&kt LS(TAB)>;
+           bindings = <&kp LS(TAB)>;
        };
    
        simple_classic_brace {
