@@ -40,7 +40,7 @@
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
                       &trans       &trans      &trans      &trans      &trans        &trans      &trans        &trans        &trans        &trans     &trans       &trans
                 // ╰───────────┴───────────┴───────────┴───────────┴────────────┴────────────┴─┴───────────┴─────────────┴────────────┴────────────┴───────────┴────────────╯
-                                    &mt LGUI   &mo LOWER    &sk LSHIFT                                &kp RET      &mo RAISE    &kp DEL
+                                    &kp LGUI   &mo LOWER    &sk LSHIFT                                &kp RET      &mo RAISE    &kp DEL
             >;
         };
 
@@ -98,14 +98,14 @@
            timeout-ms = <50>;
            key-positions = <2 3>;
            layers = <BASE>;
-           bindings = <&kt LALT>;
+           bindings = <&kp LALT>;
        };
    
        combo_shift_toggle {
            timeout-ms = <50>;
            key-positions = <13 14>;
            layers = <BASE>;
-           bindings = <&kt LSHIFT>;
+           bindings = <&kp LSHIFT>;
        };
    
        combo_tab_fwd {
