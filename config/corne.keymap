@@ -53,7 +53,7 @@
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
                       &trans     &kp GRAVE    &kp DQT    &kp SQT     &kp LPAR      &kp RPAR        &kp H       &kp LEFT      &kp DOWN    &kp RIGHT     &kp PIPE     &trans
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
-                     &trans    &kp LA(LS(NO)) &kp LBRC   &kp RBRC     &kp LBKT     &kp RBKT         &trans       &trans       &kp LT       &kp GT     &kp QMARK      &trans
+                     &trans  &kp LA(LS(SPACE))  &kp LBRC   &kp RBRC     &kp LBKT     &kp RBKT         &trans       &trans       &kp LT       &kp GT     &kp QMARK      &trans
                 // ╰───────────┴───────────┴───────────┴───────────┴────────────┴────────────┴─┴───────────┴─────────────┴────────────┴────────────┴───────────┴────────────╯
                                     &sk LCTRL   &mo LOWER   &sk LSHIFT                                 &kp RET      &mo RAISE    &kp BSPC
             >;
