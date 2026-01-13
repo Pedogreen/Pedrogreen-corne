@@ -49,11 +49,11 @@
             display-name = "RAISE";
             bindings = <
                 // ╭───────────┬───────────┬───────────┬───────────┬────────────┬────────────╮ ╭───────────┬─────────────┬────────────┬────────────┬───────────┬────────────╮
-                       &trans     &kp ESC     &kp HOME    &kp END      &trans        &trans        &trans        &trans     &kp UP        &trans      &trans        &trans
+                       &trans     &kp ESC     &kp HOME    &kp END      &LSHIFT      &LALT         &trans        &trans     &kp UP        &trans      &trans        &trans
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
                       &trans     &kp GRAVE    &kp DQT    &kp SQT     &kp LPAR      &kp RPAR        &kp H       &kp LEFT      &kp DOWN    &kp RIGHT     &kp PIPE     &trans
                 // ├───────────┼───────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼────────────┼────────────┼────────────┼───────────┤
-                     &trans       &trans      &kp LBRC   &kp RBRC     &kp LBKT     &kp RBKT         &trans       &trans       &kp LT       &kp GT     &kp QMARK      &trans
+                     &trans    &kp LA(LS(NO)) &kp LBRC   &kp RBRC     &kp LBKT     &kp RBKT         &trans       &trans       &kp LT       &kp GT     &kp QMARK      &trans
                 // ╰───────────┴───────────┴───────────┴───────────┴────────────┴────────────┴─┴───────────┴─────────────┴────────────┴────────────┴───────────┴────────────╯
                                     &sk LCTRL   &mo LOWER   &sk LSHIFT                                 &kp RET      &mo RAISE    &kp BSPC
             >;
@@ -122,47 +122,8 @@
            bindings = <&kp LS(TAB)>;
        };
    
-       simple_classic_brace {
-           timeout-ms = <50>;
-           key-positions = <7 8>;
-           layers = <BASE>;
-           bindings = <&kp LS(N9)>;
-       };
-   
-       simple_classic_closing_brace {
-           timeout-ms = <50>;
-           key-positions = <8 9>;
-           layers = <BASE>;
-           bindings = <&kp LS(N0)>;
-       };
-   
-       simple_bracket {
-           timeout-ms = <50>;
-           key-positions = <19 20>;
-           layers = <BASE>;
-           bindings = <&kp LBKT>;
-       };
-   
-       simple_closing_bracket {
-           timeout-ms = <50>;
-           key-positions = <20 21>;
-           layers = <BASE>;
-           bindings = <&kp RBKT>;
-       };
-   
-       simple_brace {
-           timeout-ms = <50>;
-           key-positions = <31 32>;
-           layers = <BASE>;
-           bindings = <&kp LS(LBKT)>;
-       };
-   
-       simple_closing_brace {
-           timeout-ms = <50>;
-           key-positions = <32 33>;
-           layers = <BASE>;
-           bindings = <&kp LS(RBKT)>;
-       };
+      
+
     };
 
 };
