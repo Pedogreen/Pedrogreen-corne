@@ -1,4 +1,5 @@
 #include <zephyr/kernel.h>
+#include <zephyr/sys/printk.h>
 #include <zmk/events/layer_state_changed.h>
 #include <zmk/hid.h>
 
@@ -12,6 +13,7 @@ static void update_layer_byte(const struct zmk_layer_state_changed *ev) {
     if (BIT(3) & ev->state) layer_byte |= 0x08; /* FUN */
 
     zmk_hid_report_send(USAGE_PAGE(0xFF00), USAGE_ID(0x01), &layer_byte, sizeof(layer_byte));
+    printk("LAYER:%02X\n", layer_byte);
 }
 
 ZMK_LISTENER(layer_hid_listener, update_layer_byte);

@@ -4,7 +4,7 @@
 		layer_state_report: layer_state_report {
 			usage_page = <0xFF00>;
 			usage_id = <0x01>;
-			report_id = <1>;
+			report_id = <3>;
 			logical_minimum = <0>;
 			logical_maximum = <0xFF>;
 			report_size = <8>;
